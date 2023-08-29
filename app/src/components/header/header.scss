@@ -1,0 +1,23 @@
+@import '../../App.scss';
+
+.header{
+    //background-color: red;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-items: flex-start;
+    .text-back-drop{
+        background-color: $secondary-color;
+        width: 178px;
+        height: 24px;
+        border-radius: 40px;
+        transform: translate(200px, 50px);
+        p{
+            position: relative;
+            transform: translate(0, -35px);
+            color: $primary-color;
+            font-family: 'Fira Mono Medium', 'Inter', sans-serif;
+            font-size: 24px;
+        }
+    }
+}

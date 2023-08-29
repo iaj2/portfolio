@@ -1,0 +1,17 @@
+@import '../../App.scss';
+
+.hero-section-container{
+    background-color: $secondary-color;
+    height: 520px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .hero-section-grid{
+        height: 100%;
+        background-color: red;
+        width: 1000px;
+    }
+    
+}
+
