@@ -1,17 +1,274 @@
 @import '../../App.scss';
 
+$self-img-size-desktop: 270px;
+$self-img-size-tablet: 200px;
+
 .hero-section-container{
     background-color: $secondary-color;
-    height: 520px;
+    height: 600px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 
     .hero-section-grid{
         height: 100%;
-        background-color: red;
-        width: 1000px;
-    }
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 6fr 2fr 2fr 2fr;
+        grid-gap: 20px 0px;
+        grid-template-areas:
+        'intro'
+        'school'
+        'connect'
+        'about-cta';
+        div {
+            display: flex;
+            align-items: center;
+            padding-left: 15px;
+            padding-right: 15px;
+            p {
+                min-width: none;
+                max-width: 500px;
+                font-size: 22px;
+            }
+        }
+
+        .intro {
+            grid-area: 1/1 / 1/1;
     
+            span{
+                font-weight: 900;
+            }
+        }
+
+        .image {
+            display: none;
+        }
+
+        .school {
+            grid-area: 2/1 / 2/1;
+            p {
+                font-size: 20px;
+                color: #ffffff8a;
+            }
+            span {
+                margin-left: 15px;
+            }
+            
+        }
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $background-color;
+            border-radius: 80px;
+            border-width: 1.5px;
+            border-color: $primary-color;
+            margin-left: 15px;
+            height: 50px;
+            width: 90px;
+            color: $primary-color;
+            font-weight: 600;
+        }
+
+        .connect {
+            grid-area: 3/1 /3/1;
+            
+            .social {
+                width: 50px;
+                height: 50px;
+                border-radius: 5px;
+                svg{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .github{
+                margin-left: 15px;
+            }
+
+            
+            .resume-button{
+                a {
+                    color: $primary-color;
+                    text-decoration: none;
+                    font-weight: 600;
+                }     
+            }
+
+        }
+
+        .about-cta {
+            grid-area: 4/1 /4/1;
+            align-items: flex-start;
+            padding: 0;
+            
+            .about-cta-button {
+                width: 170px;
+                font-size: 12px;
+            }
+            svg{
+                width: 40px;
+                height: 40px;
+                transform: translatex(10px);
+                
+            }
+        }
+    }
+}
+@media screen and (min-width: 800px) {
+    .hero-section-container {
+        .hero-section-grid {
+            display: grid;
+            grid-template-columns: 5fr 4fr;
+            grid-template-rows: 6fr 1fr 2fr;
+            grid-gap: 10px 0px;
+            grid-template-areas:
+            'intro img'
+            'school img'
+            'connnect about-cta';
+            div {
+                padding-left: 40px;
+            }
+            .intro {
+                grid-area: 1 / 1 / 2 / 2;
+                padding: 100px 50px 40px 50px;
+                p {
+                    font-size: 26px;
+                    max-width: 600px;
+                }
+            }
+        
+            .image {
+                display: flex;
+                grid-area: 1 / 2 / 3 / 2;
+                .img-back-drop{
+                    width: $self-img-size-tablet;
+                    height: $self-img-size-tablet;
+                    padding: 0;
+                    background-color: #00000000;
+                    border: 2px solid $primary-color;
+                    transform: translate(30px,50px);
+                    img{
+                        position: relative;
+                        transform: translate(-50px, -50px);
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            button {
+                &:hover{
+                    filter: opacity(70%);
+                    cursor: pointer;
+                }
+            }
+
+            .school {
+                grid-area: 2/1 / 2/1;
+                justify-content: flex-start;
+            }
+        
+            .connect {
+                align-self: flex-start;
+                grid-area: 3/1 / 4/1;
+                .social {
+                    &:hover{
+                        filter: opacity(70%);
+                    }   
+                }
+               
+            }
+            .about-cta {
+                grid-area: 3/2 / 4/2;
+                
+                .about-cta-button {
+                    width: 200px;
+                    font-size: 14px;
+                    transform: translatex(60px);
+                }
+                svg{
+                    width: 42px;
+                    height: 42px;
+                    transform: translatex(15px);
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:1000px) {
+    .hero-section-container {
+        height: 600px;
+
+        .hero-section-grid {
+            display: grid;
+            width: 1300px;
+            grid-gap: 20px 60px;
+
+            .intro {
+                p {
+                    font-size: 28px;
+                }
+            }
+        
+            .image {
+                .img-back-drop{
+                    width: $self-img-size-desktop;
+                    height: $self-img-size-desktop;
+                }
+            }
+            button {
+                height: 55px;
+
+            }
+
+            .school {
+                grid-area: 2/1 / 2/1;
+                justify-content: flex-start;
+                p {
+                    font-size: 22px;
+                }
+            }
+            
+            .connect {
+                .social {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 5px;  
+                }
+                .github{
+                    margin-left: 30px;
+                }
+                
+                
+                .resume-button{   
+                    width: 120px;
+                    margin-left: 45px;
+                    a{
+                        font-size: 16px;
+                    }     
+                }
+                .contact-button{
+                    width: 150px;
+                    margin-left: 20px;
+                    font-size: 16px;
+                }
+            }
+            .about-cta {                
+                .about-cta-button {
+                    width: 220px;
+                    font-size: 16px;
+                    transform: translatex(60px);
+                }
+                svg{
+                    width: 45px;
+                    height: 45px;
+                }
+            }
+            
+        }
+        
+    }
 }
 

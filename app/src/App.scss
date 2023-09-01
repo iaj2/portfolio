@@ -4,13 +4,13 @@ $secondary-color: #4d4d4d36;
 
 @font-face {
   font-family: 'Inter';
-  src: url('./fonts/Inter/Inter-VariableFont_slnt,wght.ttf') format('woff2');
+  src: url('./assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf') format('woff2');
   font-weight: 100 900;
 }
 
 @font-face {
   font-family: 'Fira Mono Medium';
-  src: url('./fonts/Fira_Mono/FiraMono-Medium.ttf');
+  src: url('./assets/fonts/Fira_Mono/FiraMono-Medium.ttf');
 }
 
 body {
