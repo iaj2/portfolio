@@ -1,6 +1,8 @@
 $primary-color: #ffffff;
 $background-color: #0C0C0C;
 $secondary-color: #4d4d4d36;
+$tablet-width: 800px;
+$desktop-width: 1000px;
 
 @font-face {
   font-family: 'Inter';
@@ -13,7 +15,14 @@ $secondary-color: #4d4d4d36;
   src: url('./assets/fonts/Fira_Mono/FiraMono-Medium.ttf');
 }
 
+@font-face {
+  font-family: 'Fira Mono Bold';
+  src: url('./assets/fonts/Fira_Mono/FiraMono-Bold.ttf');
+}
+
 body {
   background-color: $background-color;
   color: $primary-color;
+  display: flex;
+  flex-direction: column;
 }

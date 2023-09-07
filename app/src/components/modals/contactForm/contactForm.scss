@@ -1,0 +1,68 @@
+.contact-form-modal {
+    background-color: #00000082;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #020202;
+    height: 650px;
+    width: 350px;
+    border-radius: 35px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+
+    .close-button {
+        align-self: flex-start;
+        transform: translate(-45px,15px);
+        width: 35px !important;
+        height: 35px !important;
+        border: 0px;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .title {
+        font-family: 'Fira Mono Bold';
+        transform: translateY(20px);
+    }
+}
+
+
+
+@media screen and (min-width:800px) {
+    
+    .contact-form {
+        height: 650px;
+        width: 350px;
+        .close-button {
+            align-self: flex-start;
+            transform: translate(-45px,15px);
+            width: 35px !important;
+            height: 35px !important;
+            border: 0px;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    
+      
+    }
+}
+
+

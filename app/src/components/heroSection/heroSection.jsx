@@ -1,4 +1,5 @@
 import './heroSection.scss'
+import ContactFormModal from '../modals/contactForm/contactForm'
 import { ReactComponent as LinkedInIcon } from '../../assets/icons/linkedIn.svg'
 import { ReactComponent as GitHubIcon } from '../../assets/icons/github.svg'
 import { ReactComponent as RightArrowIcon } from '../../assets/icons/right-arrow.svg'
@@ -31,9 +32,7 @@ const HeroSection = () => {
                 <button className='resume-button' id='resume'>
                     <a href={resumePdf} rel="noreferrer" target='_blank' download={resumePdf}>RESUME</a>
                 </button>
-                <button className='contact-button' id='contact'>
-                    CONTACT
-                </button>
+                <ContactFormModal />
             </div>
             <div className='about-cta'>
                 <button className='about-cta-button' id='about-cta'>
