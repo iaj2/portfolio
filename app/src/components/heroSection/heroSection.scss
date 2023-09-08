@@ -76,8 +76,7 @@ $self-img-size-tablet: 200px;
             align-items: center;
             background-color: $background-color;
             border-radius: 80px;
-            border-width: 1.5px;
-            border-color: $primary-color;
+            border: 1.5px solid $primary-color;
             margin-left: 15px;
             height: 50px;
             width: 90px;
@@ -149,7 +148,7 @@ $self-img-size-tablet: 200px;
                     padding: 0;
                     background-color: #00000000;
                     border: 2px solid $primary-color;
-                    transform: translate(30px,40px);
+                    transform: translate(40px,40px);
                     img{
                         position: relative;
                         transform: translate(-40px, -40px);
@@ -204,10 +203,17 @@ $self-img-size-tablet: 200px;
 
         .hero-section-grid {
             display: grid;
-            width: 1300px;
+            
+            max-width: 1300px;
             grid-gap: 20px 60px;
 
+            .intro, .school, .connect {
+                justify-self: flex-start;
+                padding-left: 80px !important;
+            }
+
             .intro {
+          
                 p {
                     font-size: 24px;
                 }
