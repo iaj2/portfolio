@@ -29,16 +29,16 @@ body.modal-active {
 }
 
 .contact-form {
-    background-color: #020202;
-    height: 650px;
+    background-color: $near-black;
+    height: 580px;
     width: 350px;
     border-radius: 35px;
 
     .close-button {
         align-self: flex-start;
-        transform: translate(-5px,15px);
-        width: 25px !important;
-        height: 25px !important;
+        transform: translate(-2px,12px);
+        width: 20px !important;
+        height: 20px !important;
         border: 0px;
         svg {
             width: 10px;
@@ -47,14 +47,12 @@ body.modal-active {
     }
 
     .title {
-        font-family: 'Fira Mono Bold';
-        font-size: 22px;
-        padding-bottom: 5px;
+        //font-size: 22px;
+        //font-weight: 500;
         margin-top: 40px;
     }
     
     div {
-
         padding-top: 5px;
         label {
             align-self: flex-start;
@@ -67,7 +65,7 @@ body.modal-active {
         input, textarea {
             width: 260px;
             height: 30px;
-            border-radius: 15px;
+            border-radius: 10px;
             border: 2px solid $primary-color;
             background-color: $secondary-color;
             color: $primary-color;
@@ -76,7 +74,7 @@ body.modal-active {
             font-family: 'Inter';
 
             &:focus {
-                outline: 2px solid $tertiary-color;
+                outline: 1px solid $tertiary-color;
             }
         }
 
@@ -91,7 +89,7 @@ body.modal-active {
     
     .submit-button {
         width: 160px !important;
-        margin-top: 30px;
+        margin-top: 20px;
         margin-left: 0 !important;
     }
 
@@ -114,15 +112,14 @@ body.modal-active {
             padding-left: 0 !important;
             padding-right: 0 !important;
 
+            input {
+                height: 40px;
+            }
             input, textarea {
                 width: 350px;
             }
         }
         .close-button {
-            align-self: flex-start;
-            width: 30px !important;
-            height: 30px !important;
-            border: 0px;
             svg {
                 width: 20px;
                 height: 20px;
@@ -130,7 +127,7 @@ body.modal-active {
         }
 
         textarea {
-            height: 130px !important;
+            height: 175px !important;
         }
     
       

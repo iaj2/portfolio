@@ -1,0 +1,19 @@
+@import '../../../App.scss';
+
+.add-button {
+    height: 25px;
+    width: 70px;
+    background-color: $secondary-color;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    color: $primary-color;
+    svg {
+        width: 22px;
+        height: 22px;
+        fill: none;
+    }
+}

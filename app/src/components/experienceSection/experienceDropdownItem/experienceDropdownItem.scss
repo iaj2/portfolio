@@ -1,0 +1,45 @@
+@import '../../../App.scss';
+
+$item-inactive-height-mobile: 65px;
+$item-width-mobile: 340px;
+$item-border-radius: 5px;
+
+.experience-item-container {
+    background-color: $near-black;
+    min-height: $item-inactive-height-mobile;
+    width: $item-width-mobile;
+    border-radius: $item-border-radius;
+    border: 2px solid $near-black;
+    
+    .experience-item-header {
+        background-color: $secondary-color;
+        height: $item-inactive-height-mobile;
+        width: $item-width-mobile - 4;
+        border-radius: $item-border-radius;
+        display: flex;
+        align-items: flex-end;
+        padding-left: 5px; padding-right: 5px;
+        p {
+            width: 100%;
+            padding: 0;
+        }
+
+        a {
+            position: absolute;
+            width: $item-width-mobile;
+            background-color: red;
+            height: $item-inactive-height-mobile;
+            opacity: 0%;
+            
+        }
+
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 300;
+        padding-left: 5px; padding-right: 5px;
+    }
+
+    
+}

@@ -7,6 +7,8 @@ export default function ContactFormModal() {
     const [modal, setModal] = useState(false)
 	const formRef = useRef()
 
+	console.log(process.env.REACT_APP_EMAIL_API)
+
     const toggleModal = () => {
         setModal(!modal)
 		
@@ -20,7 +22,7 @@ export default function ContactFormModal() {
 				'service_cpc8x8s',
 				'contact_form',
 				formRef.current,
-				'tK5rZ0OrKfidMlihM'
+				process.env.REACT_APP_EMAIL_API
 			)
 			.then(
 				() => {
@@ -67,7 +69,7 @@ export default function ContactFormModal() {
 				<button className="close-button" onClick={toggleModal}>
 					{<CloseIcon />}
 				</button>
-				<h2 className="title">Let's Get Connected!</h2>
+				<h2 className="title">Let's Connect!</h2>
 				<div className='name-container'>
 					<label for='name-input'>Name</label>
 					<input type='text' name='user_name' id='name-input' required></input>

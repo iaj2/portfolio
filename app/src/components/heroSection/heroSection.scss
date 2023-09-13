@@ -157,12 +157,7 @@ $self-img-size-tablet: 200px;
                     }
                 }
             }
-            button {
-                &:hover{
-                    filter: opacity(70%);
-                    cursor: pointer;
-                }
-            }
+            
 
             .school {
                 grid-area: 2/1 / 2/1;
@@ -209,7 +204,12 @@ $self-img-size-tablet: 200px;
 
             .intro, .school, .connect {
                 justify-self: flex-start;
-                padding-left: 80px !important;
+                padding-left: 55px;
+                padding-right: 30px;
+            }
+
+            .image, .about-cta {
+                margin-left: 70px;
             }
 
             .intro {

@@ -1,0 +1,30 @@
+@import '../../../App.scss';
+@import '../admin.scss';
+
+
+$width: 65px;
+.edit-button {
+    width: $width;
+    height: 35px;
+    background-color: $near-black;
+    border: none;
+    border-radius: 5px;
+    color: $primary-color;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transform: translateX(calc($item-container-width-mobile - $width - 5px));
+    
+    svg {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 2px;
+    }
+}
+
+
+@media screen and (min-width: $desktop-width) {
+    .edit-button {
+        transform: translateX(calc($item-container-width-desktop - $width - 5px));
+    }
+}

@@ -1,7 +1,8 @@
 $primary-color: #ffffff;
 $background-color: #0C0C0C;
 $secondary-color: #4d4d4d36;
-$tertiary-color: #ff010162;
+$tertiary-color: #ff0000cf;
+$near-black: #020202;
 $tablet-width: 769px;
 $desktop-width: 1000px;
 
@@ -26,4 +27,12 @@ body {
   color: $primary-color;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+}
+
+button{
+  &:hover{
+    filter: opacity(70%);
+    cursor: pointer;
+  }
 }
