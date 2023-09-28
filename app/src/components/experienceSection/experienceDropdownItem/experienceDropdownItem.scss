@@ -4,12 +4,15 @@ $item-inactive-height-mobile: 65px;
 $item-width-mobile: 340px;
 $item-border-radius: 5px;
 
+$item-width-desktop: 640px;
+
 .experience-item-container {
     background-color: $near-black;
     min-height: $item-inactive-height-mobile;
     width: $item-width-mobile;
     border-radius: $item-border-radius;
     border: 2px solid $near-black;
+    max-height: none;
     
     .experience-item-header {
         background-color: $secondary-color;
@@ -17,17 +20,19 @@ $item-border-radius: 5px;
         width: $item-width-mobile - 4;
         border-radius: $item-border-radius;
         display: flex;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: space-evenly;
         padding-left: 5px; padding-right: 5px;
+
         p {
-            width: 100%;
-            padding: 0;
+        
+            font-size: 14px;
+            font-weight: 300;
         }
 
         a {
             position: absolute;
             width: $item-width-mobile;
-            background-color: red;
             height: $item-inactive-height-mobile;
             opacity: 0%;
             
@@ -35,11 +40,42 @@ $item-border-radius: 5px;
 
     }
 
-    p {
-        font-size: 14px;
-        font-weight: 300;
+    .job-description-container {
+        overflow: hidden;
+        min-height: fit-content;
         padding-left: 5px; padding-right: 5px;
+        
+        p {
+            font-size: 14px;
+            font-weight: 300;
+        }
+    }
+    
+}
+
+@media screen and (min-width: $desktop-width){
+    .experience-item-container {
+        width: $item-width-desktop;
+        .experience-item-header {
+            width: $item-width-desktop - 3.5;
+            a {
+                width: $item-width-desktop;
+            }
+            p {
+                font-size: 17px;
+                font-weight: 400;
+            }
+        }
+        .job-description-container {
+            padding-left: 15px; padding-right: 15px;
+            p {
+                font-size: 16px;
+                font-weight: 300;
+            }
+        }
+
     }
 
+    
     
 }

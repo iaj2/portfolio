@@ -9,6 +9,17 @@
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    p {
+        font-size: 14px;
+        margin-left: 5px;
+    }
+
+    .job-title {
+        margin-left: 65px;
+    }
 
 }
 
@@ -17,4 +28,6 @@
         width: $item-container-width-desktop;
         
     }
+
+    
 }

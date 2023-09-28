@@ -1,7 +1,7 @@
 import './experienceDropdownItem.scss'
 import { useState } from 'react'
 
-const ExperienceDropdownItem = ({companyName,jobTitle, jobDuration, jobDescription}) => {
+const ExperienceDropdownItem = ({job}) => {
     const [dropdown, setDropdown] = useState(false)
     
 
@@ -15,11 +15,14 @@ const ExperienceDropdownItem = ({companyName,jobTitle, jobDuration, jobDescripti
                 <a href='#experience-content'> 
    
                 </a>
-                <p>{companyName}<span>• {jobTitle} </span><br/>
-                <span>• {jobDuration}</span></p>
+                <p>{job.companyName}</p>
+                <p className='job-title'>{job.jobTitle} </p>
+                <p> {job.jobStart} - {job.jobEnd}</p>
             </div>
             {dropdown &&
-            <p id='experience-content'>{jobDescription}</p>
+            <div className='job-description-container'> <p className='job-description' id='experience-content'>{job.jobDescription}</p>
+            </div>
+            
             }
            
         </div>

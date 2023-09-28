@@ -26,10 +26,7 @@ const ExperienceSection = () => {
                 {jobs.map((job) => {
                     return (
                         <ExperienceDropdownItem 
-                        companyName={job.companyName}
-                        jobTitle={job.jobTitle}
-                        jobDuration={job.jobDuration}
-                        jobDescription={job.jobDescription}
+                        job={job}
                         />
                     )
                 })}

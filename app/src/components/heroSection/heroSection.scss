@@ -117,6 +117,7 @@ $self-img-size-tablet: 200px;
 }
 @media screen and (min-width: $tablet-width) {
     .hero-section-container {
+        max-height: 500px;
         .hero-section-grid {
             display: grid;
             height: 100%;
@@ -128,13 +129,13 @@ $self-img-size-tablet: 200px;
             'school img'
             'connnect about-cta';
             div {
-                padding-left: 40px;
+                display: flex;
+                justify-content: center;
             }
             .intro {
                 grid-area: 1 / 1 / 2 / 2;
-                padding: 100px 50px 40px 50px;
                 p {
-                    font-size: 26px;
+                    font-size: 22px;
                     max-width: 600px;
                 }
             }
@@ -194,13 +195,12 @@ $self-img-size-tablet: 200px;
 }
 @media screen and (min-width:$desktop-width) {
     .hero-section-container {
-        height: 500px;
+        
 
         .hero-section-grid {
             display: grid;
-            
-            max-width: 1300px;
-            grid-gap: 20px 60px;
+            max-width: 1200px;
+            grid-gap: 20px 30px;
 
             .intro, .school, .connect {
                 justify-self: flex-start;
@@ -208,14 +208,12 @@ $self-img-size-tablet: 200px;
                 padding-right: 30px;
             }
 
-            .image, .about-cta {
-                margin-left: 70px;
-            }
+
 
             .intro {
           
                 p {
-                    font-size: 24px;
+                    font-size: 22px;
                 }
             }
         
@@ -226,7 +224,7 @@ $self-img-size-tablet: 200px;
                 }
             }
             button {
-                height: 55px;
+                height: 50px;
 
             }
 
@@ -234,14 +232,14 @@ $self-img-size-tablet: 200px;
                 grid-area: 2/1 / 2/1;
                 justify-content: flex-start;
                 p {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
             }
             
             .connect {
                 .social {
-                    width: 55px;
-                    height: 55px;
+                    width: 50px;
+                    height: 50px;
                     border-radius: 5px;  
                 }
                 .github{
@@ -264,14 +262,14 @@ $self-img-size-tablet: 200px;
             }
             .about-cta {                
                 .about-cta-button {
-                    width: 220px;
+                    width: 200px;
                     font-size: 14px;
                     z-index: 0;
                 }
                 svg{
                     width: 45px;
                     height: 45px;
-                    transform: translatex(22px);
+                    transform: translatex(15px);
                 }
             }
             

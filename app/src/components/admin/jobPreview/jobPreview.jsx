@@ -2,10 +2,14 @@ import './jobPreview.scss'
 import { useState, useEffect, useRef } from 'react'
 import EditButton from '../editButton/editButton'
 import JobEditModal from '../../modals/crudModals/jobEdit'
+import { db } from '../../../firebase-config'
+import { collection, getDocs } from '@firebase/firestore'
 
 const JobPreview = () => {
     const [editModal, setEditModal] = useState(false);
     const editModalRef = useRef()
+	const [jobs, setJobs] = useState([])
+    const jobCollectionRef = collection(db, 'jobs')
 
     useEffect(() => {
 		const handleClickOutside = (e) => {
@@ -29,21 +33,42 @@ const JobPreview = () => {
 	
 	  }, [editModal]);
 
+	  useEffect( () => {
+        const getJobs = async () => {
+            const data = await getDocs(jobCollectionRef)
+            setJobs(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+        }
+
+        getJobs()
+    }, [jobCollectionRef])
+
     return (
         <>
-            <div className='job-preview-container'>
-                <EditButton modal={editModal} setModal={setEditModal}/>
-            </div>
-        {
-            editModal && 
-            <JobEditModal 
-			category={'edit'}
-			modalRef={editModalRef}
-			modal={editModal}
-			setModal={setEditModal} 
-			/>
+		{jobs.map((job) => {
+			return (
+				<>
+				<div className='job-preview-container'>
+                <p>{job.companyName}</p>
+                <p className='job-title'>{job.jobTitle} </p>
+				<EditButton modal={editModal} setModal={setEditModal}/>
+				</div>
+				{
+				editModal && 
+				<JobEditModal 
+				category={'edit'}
+				modalRef={editModalRef}
+				modal={editModal}
+				setModal={setEditModal} 
+				job={job}
+				/>
 
-        }
+				}
+				</>
+				
+			)
+		})}
+            
+        
         </>
         
          

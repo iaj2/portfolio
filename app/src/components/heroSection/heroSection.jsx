@@ -7,6 +7,7 @@ import resumePdf from '../../assets/resume/9.1-Complex-numbers-PARTB.pdf'
 import meImg from '../../assets/images/me.jpg'
 
 const HeroSection = () => {
+    
     return (
     <div className='hero-section-container'>
         <div className='hero-section-grid'>

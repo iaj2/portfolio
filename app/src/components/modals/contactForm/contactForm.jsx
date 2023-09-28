@@ -7,7 +7,6 @@ export default function ContactFormModal() {
     const [modal, setModal] = useState(false)
 	const formRef = useRef()
 
-	console.log(process.env.REACT_APP_EMAIL_API)
 
     const toggleModal = () => {
         setModal(!modal)
@@ -87,6 +86,7 @@ export default function ContactFormModal() {
 					<textarea name='message' id='message-input' className='message-input' required></textarea>
 				</div>
 				<button type='submit' className='submit-button' value="SUBMIT">SEND</button>
+							
 			</form>
         </div>
         }

@@ -7,17 +7,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    max-height: 10vh;
+
     .text-back-drop{
         background-color: $secondary-color;
-        width: 178px;
-        height: 24px;
+        width: 168px;
+        height: 20px;
         border-radius: 40px;
         p{
             position: relative;
             transform: translate(0, -35px);
             color: $primary-color;
             font-family: 'Fira Mono Medium', 'Inter', sans-serif;
-            font-size: 24px;
+            font-size: 22px;
         }
     }
 
@@ -41,11 +43,9 @@
     .header{
     //background-color: red;
     height: 130px;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
-    .text-back-drop{
-        transform: translate(200px, 50px);
-        }
+    padding-left: 150px;
     }
 }
 

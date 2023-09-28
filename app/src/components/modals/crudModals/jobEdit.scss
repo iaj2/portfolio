@@ -1,6 +1,6 @@
 @import '../../../App.scss';
 
-body.modal-active {
+body.modal-disable-scroll{
     overflow-y: hidden;
 }
 
@@ -15,7 +15,7 @@ body.modal-active {
     position: fixed;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     z-index: 999;
     padding: 0 !important;
     overflow: hidden;
@@ -29,9 +29,10 @@ body.modal-active {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    margin-top: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 80vh;
     .close-button {
-        position: absolute;
         width: 20px;
         height: 20px ;
         display: flex;
@@ -49,7 +50,7 @@ body.modal-active {
     }
 
     .title {
-        margin-top: 35px;
+        margin-top: 15px;
     }
 }
 
@@ -61,8 +62,9 @@ body.modal-active {
     column-gap: 15px;
     transform: translateY(-5px);
     width: 315px;
-    height: 400px;
+    height: 370px;
     align-self: center;
+    
     div {
         display: flex;
         flex-direction: column;

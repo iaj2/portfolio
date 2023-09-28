@@ -8,7 +8,7 @@ import { useState, useEffect, useRef } from 'react'
 
 const Admin = () => {
     
-    const [addJobModal, setAddJobModal] = useState(true);
+    const [addJobModal, setAddJobModal] = useState(false);
     const addJobModalRef = useRef()
 
     useEffect(() => {
