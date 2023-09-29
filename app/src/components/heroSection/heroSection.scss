@@ -50,6 +50,13 @@ $self-img-size-tablet: 200px;
             .about-cta-button {
                 width: 170px;
                 font-size: 12px;
+                
+                .anchor {
+                    position: absolute;
+                    border-radius: inherit;
+                    width: inherit;
+                    height: inherit;
+                }
             }
             svg{
                 width: 40px;

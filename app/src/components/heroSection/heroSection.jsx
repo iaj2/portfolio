@@ -1,4 +1,5 @@
 import './heroSection.scss'
+import { HashLink as Link } from 'react-router-hash-link'
 import ContactFormModal from '../modals/contactForm/contactForm'
 import { ReactComponent as LinkedInIcon } from '../../assets/icons/linkedIn.svg'
 import { ReactComponent as GitHubIcon } from '../../assets/icons/github.svg'
@@ -40,6 +41,9 @@ const HeroSection = () => {
             <div className='about-cta'>
                 <button className='about-cta-button' id='about-cta'>
                     MORE ABOUT ME
+                    <Link className='anchor' to='/#about-section'> 
+                        
+                    </Link>
                     {<RightArrowIcon />}
                 </button>
             </div>
