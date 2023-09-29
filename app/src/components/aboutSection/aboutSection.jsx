@@ -13,9 +13,8 @@ const AboutSection = () => {
                     <div className='text-container'>
                     <span className='text-larger'><b>Hi, I’m Isaac :) </b></span>  Let me tell you a bit about myself. <br></br><br></br>
                     <span className='text-large'><b>I'm Interested in...</b></span> <br></br> <br></br>
-                    🚀 Exploring full-stack and product management roles, with a passion for both technology and business. 
-                    My focus is on creating beloved products that cater to the bigger picture. <br></br><br></br>
-                    📚 Currently a second-year university student, eager to explore various opportunities and areas.<br></br> <br></br>
+                    🚀 Exploring full stack and product management roles, merging my love for technology and business. I'm passionate about the big picutre in developing products people love. 
+                    Excitedly navigating my second year of university, I'm open to diverse opportunities! <br></br><br></br>
                     <span className='text-large'><b>My other passions... </b></span><br></br> <br></br>
                     💪 I'm a gym enthusiast, using it to enhance my focus and discipline while relieving stress.<br></br> <br></br>
                     🤽‍♂️ I used to play competitive water polo, achieving accolades like "Most Improved Player" and "Most Valuable Defender," along with winning a Western Conference final. 
@@ -23,7 +22,7 @@ const AboutSection = () => {
                     📈 Recently, I've developed a keen interest in learning about entrepreneurship and business
                      through YouTube's entrepreneurial success stories and founder interviews. <br></br><br></br>
                     🍿 I'm a big movie buff, always up for watching the latest releases, especially in theaters. <br></br> <br></br>
-                    <span className='text-large'><b>Let's get connected!</b></span>
+                    <span className='text-larger'><b>Let's get connected!</b></span>
                     </div>
                     <div className='image-container'>
 
@@ -31,7 +30,7 @@ const AboutSection = () => {
                 </div>
             </div>
             
-        </div>
+        </>
     )
 }
 

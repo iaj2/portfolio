@@ -12,13 +12,18 @@
     padding-left: 15px; padding-right: 15px;
 
     a {
+        width: 200px;
+        height: 200px;
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%; 
-        height: 100%;
-        opacity: 0; 
-        z-index: 1;
+        align-self: center;
+        transform: translateY(40px);
+        display: none;
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 20px;
+        font-weight: 400;
+        
+
     }
 
     &:hover {
@@ -26,18 +31,11 @@
             filter: brightness(15%);
         }
         transform: scale(1.015);
-        .text-overlay {
-            display: block;
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-    }
-
-    .text-overlay {
-        position: absolute;
-        align-self: center;
-        transform: translateY(80px);
-        display: none;
-        font-size: 22px;
-        font-weight: 500;
     }
 
     .project-title-wrapper {

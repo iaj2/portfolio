@@ -8,8 +8,7 @@ const ProjectItem = ({project}) => {
 
     return(
         <div className='project-item-container' >
-            <a href={project.projectGitLink} rel="noreferrer" target='_blank'>
-            </a>
+            
             <div className='project-title-wrapper'>
                 <h2 className='project-title'>{project.projectTitle}</h2>
             </div>
@@ -18,8 +17,10 @@ const ProjectItem = ({project}) => {
             </div>
             <div className='project-tech-wrapper'>
                 <p className='project-tech'><b>Tech: </b>{project.projectTech}</p>
-            </div>
-            <p className='text-overlay'>View on GitHub</p>
+            </div> 
+            <a href={project.projectGitLink} rel="noreferrer" target='_blank'>
+               View on GitHub
+            </a>
         </div>
     )
 }
