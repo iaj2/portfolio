@@ -58,7 +58,7 @@ export default function ContactFormModal() {
 
 
     return (
-    	<>
+    	<div className='contact-modal-wrapper'>
         <button className='contact-button' id='contact' onClick={toggleModal}>
             CONTACT
         </button>
@@ -90,6 +90,6 @@ export default function ContactFormModal() {
 			</form>
         </div>
         }
-      </>
+      </div>
     )
 }

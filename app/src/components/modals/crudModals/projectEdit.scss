@@ -32,6 +32,15 @@ body.modal-disable-scroll{
     overflow-y: auto;
     overflow-x: hidden;
     max-height: 80vh;
+
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: fit-content;
+
+    }
+
     .close-button {
         width: 20px;
         height: 20px ;
@@ -43,15 +52,11 @@ body.modal-disable-scroll{
         border: 1.5px solid $primary-color;
         color: $primary-color;
         svg {
-            filter: invert(100%);
             width: 10px;
             height: 10px;
         }
     }
 
-    .title {
-        margin-top: 15px;
-    }
 }
 
 .project-edit-container {

@@ -1,5 +1,13 @@
 @import '../../App.scss';
 
+.about-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: none;
+    justify-content: space-between;
+}
+
 .about-title-container {
     display: flex;
     justify-content: center;
@@ -11,15 +19,15 @@
     }
 }
 
-.about-grid {
+.about-container {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: fit-content;
-    padding: 10px;
+    padding: 10px 20px 20px 20px;
 
     .text-container {
-        grid-area: 1/ 1 / 1 / 1;
+        height: fit-content;
     
         p {
             font-size: 14px;
@@ -27,12 +35,13 @@
             white-space: pre-line; /* Preserve line breaks and wrap text as needed */
             word-wrap: break-word; /* Allow word wrapping */
             padding: 10px; /* Add padding for spacing */
-            height: fit-content;
             line-height: 1.5;
         }
 
         .text-larger {
-            font-size: 18px;
+            font-size: 20px;
+
+            
         }
 
         .text-large {
@@ -43,6 +52,27 @@
 
     .image-container {
     }
+  
+}
+
+
+
+.button-container {
+   // background-color: red;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .contact-button {
+        height: 60px;
+        width: 140px;
+        font-size: 18px;
+    }
+
+    
+
 }
 
 @media screen and (min-width: $tablet-width){
@@ -51,31 +81,21 @@
         font-size: 25px;
     }
 
-    .about-container {
+    .about-wrapper{
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .about-grid {
+    .about-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
         width: 900px;
-        height: 700px;
+        padding-bottom: 10px;
     
         .text-container {
             grid-area: 1/ 1 / 1 / 1;
-        
-            p {
-                font-size: 14px;
-                font-weight: 300;
-                white-space: pre-line; /* Preserve line breaks and wrap text as needed */
-                word-wrap: break-word; /* Allow word wrapping */
-                padding: 10px; /* Add padding for spacing */
-                height: fit-content;
-                line-height: 1.5;
-            }
     
         }
     
