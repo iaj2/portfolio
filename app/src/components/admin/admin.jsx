@@ -6,20 +6,27 @@ import JobEditModal from '../modals/crudModals/jobEdit'
 import AddButton from './addButton/addButton'
 import { useState, useEffect, useRef } from 'react'
 import ProjectPreview from './projectPreview/projectPreview'
+import ProjectEditModal from '../modals/crudModals/projectEdit'
 
 const Admin = () => {
     
     const [addJobModal, setAddJobModal] = useState(false);
     const addJobModalRef = useRef()
 
+    const [addProjectModal, setAddProjectModal] = useState(false);
+    const addProjectRef = useRef()
+
     useEffect(() => {
 		const handleClickOutside = (e) => {
 			if (addJobModalRef.current && !addJobModalRef.current.contains(e.target)) {
 			  setAddJobModal(false);
 			}
+      else if (addProjectRef.current && !addProjectRef.current.contains(e.target)) {
+			  setAddProjectModal(false);
+			}
 		  };
 		
-		if (addJobModal) {
+		if (addJobModal || addProjectModal) {
 			// Add a class to the body to disable scrolling when the modal is open
 		  document.body.classList.add('modal-active');
 			// Listen for mouse click outside modal area
@@ -32,7 +39,7 @@ const Admin = () => {
 			document.removeEventListener('mousedown', handleClickOutside);
 		}
 	
-	  }, [addJobModal]);
+	  }, [addJobModal, addProjectModal]);
 
     return (
         <div className='admin-page'>
@@ -55,7 +62,16 @@ const Admin = () => {
             <JobPreview />
             <div className='projects-header'>
               <h1 className='projects-title'>Projects</h1>
-              <AddButton modal={addJobModal} setModal={setAddJobModal}/>
+              <AddButton modal={addProjectModal} setModal={setAddProjectModal}/>
+              {
+                    addProjectModal && 
+                    <ProjectEditModal
+                    category={'add'} 
+                    modalRef={addProjectRef}
+                    modal={addProjectModal} 
+                    setModal={setAddProjectModal}
+                    />
+                }
             </div>
             <ProjectPreview />
             

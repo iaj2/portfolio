@@ -44,28 +44,23 @@ const JobPreview = () => {
 
     return (
         <>
-		<div className='job-preview-container'>
-		<p>a</p>
-		<p className='job-title'>a </p>
-		<EditButton modal={editModal} setModal={setEditModal}/>
-		</div>
 				
 		{jobs.map((job) => {
 			return (
 				<>
 				<div className='job-preview-container'>
-                <p>{job.companyName}</p>
-                <p className='job-title'>{job.jobTitle} </p>
-				<EditButton modal={editModal} setModal={setEditModal}/>
+					<p>{job.companyName}</p>
+					<p className='job-title'>{job.jobTitle} </p>
+					<EditButton modal={editModal} setModal={setEditModal}/>
 				</div>
 				{
 				editModal && 
-				<JobEditModal 
-				category={'edit'}
-				modalRef={editModalRef}
-				modal={editModal}
-				setModal={setEditModal} 
-				job={job}
+					<JobEditModal 
+					category={'edit'}
+					modalRef={editModalRef}
+					modal={editModal}
+					setModal={setEditModal} 
+					job={job}
 				/>
 
 				}
