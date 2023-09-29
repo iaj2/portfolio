@@ -14,7 +14,7 @@ const HeroSection = () => {
             <div className='intro'>
                 <p><span className='text-bold'>Hi,</span> I'm a driven computer science student with a solid foundation in software development and hands-on experience.</p>
                 <br></br>
-                <p className='text-smaller'>Most confident with <b>Python, React</b> and <b>JavaScript.</b></p>
+                <p className='text-smaller'>Confident with <b>Python, React, C++</b> and <b>JavaScript.</b></p>
             </div>
             <div className='image'>
                 <div className='img-back-drop'>

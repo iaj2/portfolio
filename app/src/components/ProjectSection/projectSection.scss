@@ -59,7 +59,7 @@
             height: fit-content;
           }
           
-          .item {
+          .project {
             height: 300px;
             padding: 2px;
             display: flex;
@@ -67,7 +67,7 @@
             justify-content: center;
           }
           
-          .item.center {
+          .project.center {
             grid-column: span 2;
         }
     }

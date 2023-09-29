@@ -3,7 +3,7 @@
 .about-title-container {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     height: 125px;
     //background-color: red;
     .about-title {
@@ -38,7 +38,7 @@
 
 @media screen and (min-width: $tablet-width){
     .about-title-container {
-        height: 200px;
+        height: 150px;
         font-size: 25px;
     }
 

@@ -1,0 +1,149 @@
+@import '../../../App.scss';
+
+body.modal-disable-scroll{
+    overflow-y: hidden;
+}
+
+.project-edit-background {
+    background-color: #21202082;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.project-edit-modal {
+    background-color: $near-black;
+    height: 600px;
+    width: 350px;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 80vh;
+    .close-button {
+        width: 20px;
+        height: 20px ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $background-color;
+        border-radius: 80px;
+        border: 1.5px solid $primary-color;
+        color: $primary-color;
+        svg {
+            filter: invert(100%);
+            width: 10px;
+            height: 10px;
+        }
+    }
+
+    .title {
+        margin-top: 15px;
+    }
+}
+
+.project-edit-container {
+    display: flex;
+    flex-direction: column;
+    //background-color: red;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 5px;
+        font-size: 16px;
+    }
+
+    .project-title-container {
+        //background-color: blue;
+        height: 60px;
+        
+        input {
+            height: 30px;
+        }
+    }
+
+    .project-description-container {
+        textarea {
+            height: 150px;
+        }
+    }
+
+    .project-tech-container {
+        textarea{
+            height: 30px;
+        }
+    }
+
+    input, textarea {
+        width: 280px;
+        font-size: 14px;
+        font-weight: 400 !important;
+        font-family: 'Inter';
+
+    }
+}
+
+.save-button {
+    align-self: center;
+    border-radius: 50px;
+    height: 40px;
+    width: 80px;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    background-color: $background-color;
+}
+
+
+@media  screen and (min-width: $desktop-width) {
+    .project-edit-modal {
+        width: 600px;
+        height: 600px;
+    }
+
+    .project-edit-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 450px;
+    
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 5px;
+            font-size: 16px;
+        }
+    
+        
+        input {
+            height: 30px;
+        }
+        
+    
+        input, textarea {
+            width: 400px;
+
+        }
+    }
+}
+

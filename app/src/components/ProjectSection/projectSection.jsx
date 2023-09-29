@@ -1,10 +1,22 @@
 import './projectSection.scss'
 import ProjectItem from './projectItem/projectitem'
+import { useEffect, useState } from 'react'
+import { db } from '../../firebase-config'
+import { collection, getDocs } from '@firebase/firestore'
 
 const ProjectSection = () => {
-    const items = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5'];
-    const numRows = Math.ceil(items.length / 2);
     
+    const [projects, setProjects] = useState([])
+    const projectsCollectionRef = collection(db, 'projects')
+
+    useEffect( () => {
+        const getProjects = async () => {
+            const data = await getDocs(projectsCollectionRef)
+            setProjects(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+        }
+
+        getProjects()
+    }, [projectsCollectionRef])
 
     return (
     <>
@@ -13,13 +25,13 @@ const ProjectSection = () => {
         </div>
         <div className='project-section-container'>
             <div className='projects-view'>
-            {items.map((item, index) => (
+            {projects.map((project, index) => (
             <div
                 key={index}
-                className={`item ${index === items.length - 1 && items.length % 2 !== 0 ? 'center' : ''}`}
+                className={`project ${index === projects.length - 1 && projects.length % 2 !== 0 ? 'center' : ''}`}
                 
             >
-            <ProjectItem />
+                <ProjectItem project={project}/>
             </div>
         ))}
         </div>
