@@ -31,19 +31,25 @@ const JobPreview = () => {
 			document.removeEventListener('mousedown', handleClickOutside);
 		}
 	
-	  }, [editModal]);
+	   }, [editModal]);
 
-	  useEffect( () => {
-        const getJobs = async () => {
-            const data = await getDocs(jobCollectionRef)
-            setJobs(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
-        }
+	//   useEffect( () => {
+    //     const getJobs = async () => {
+    //         const data = await getDocs(jobCollectionRef)
+    //         setJobs(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+    //     }
 
-        getJobs()
-    }, [jobCollectionRef])
+    //     getJobs()
+    // }, [jobCollectionRef])
 
     return (
         <>
+		<div className='job-preview-container'>
+		<p>a</p>
+		<p className='job-title'>a </p>
+		<EditButton modal={editModal} setModal={setEditModal}/>
+		</div>
+				
 		{jobs.map((job) => {
 			return (
 				<>

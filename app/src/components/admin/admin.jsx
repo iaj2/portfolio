@@ -5,6 +5,7 @@ import JobPreview from './jobPreview/jobPreview'
 import JobEditModal from '../modals/crudModals/jobEdit'
 import AddButton from './addButton/addButton'
 import { useState, useEffect, useRef } from 'react'
+import ProjectPreview from './projectPreview/projectPreview'
 
 const Admin = () => {
     
@@ -41,7 +42,6 @@ const Admin = () => {
             <div className='jobs-header'>
                 <h1 className='jobs-title'>Jobs</h1>
                 <AddButton modal={addJobModal} setModal={setAddJobModal}/>
-
                 {
                     addJobModal && 
                     <JobEditModal
@@ -51,9 +51,14 @@ const Admin = () => {
                     setModal={setAddJobModal}
                     />
                 }
-                
             </div>
             <JobPreview />
+            <div className='projects-header'>
+              <h1 className='projects-title'>Projects</h1>
+              <AddButton modal={addJobModal} setModal={setAddJobModal}/>
+            </div>
+            <ProjectPreview />
+            
         </div>
     )
 }

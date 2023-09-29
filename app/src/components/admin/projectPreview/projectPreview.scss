@@ -1,7 +1,7 @@
 @import '../../../App.scss';
 @import '../admin.scss';
 
-.job-preview-container {
+.project-preview-container {
     background-color: $secondary-color;
     width: $item-container-width-mobile;
     height: 50px;
@@ -18,17 +18,12 @@
         font-weight: 500;
     }
 
-    .job-title {
-        margin-left: 65px;
-    }
 
 }
 
-@media  screen and (min-width: $desktop-width) {
-    .job-preview-container {
+@media screen and (min-width: $desktop-width) {
+    .project-preview-container {
         width: $item-container-width-desktop;
         
-    }
-
-    
+    }  
 }

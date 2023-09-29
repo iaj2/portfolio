@@ -13,6 +13,8 @@ const HeroSection = () => {
         <div className='hero-section-grid'>
             <div className='intro'>
                 <p><span className='text-bold'>Hi,</span> I'm a driven computer science student with a solid foundation in software development and hands-on experience.</p>
+                <br></br>
+                <p className='text-smaller'>Most confident with <b>Python, React</b> and <b>JavaScript.</b></p>
             </div>
             <div className='image'>
                 <div className='img-back-drop'>
@@ -20,7 +22,7 @@ const HeroSection = () => {
                 </div>
             </div>
             <div className='school'>
-                <p>SFU Comp Sci BSc <span>• 2022-2026 • 3.97 GPA</span></p>
+                <p>SFU Comp Sci BSc <span>• 2022-2026 • 3.97 / 4.33 GPA</span></p>
             </div>
             <div className='connect'>
                 <a href='https://www.linkedin.com/in/isaac-james-62765a278/' rel="noreferrer" target='_blank' className='social linkedIn'>

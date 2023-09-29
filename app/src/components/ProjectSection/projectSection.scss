@@ -1,0 +1,76 @@
+@import '../../App.scss';
+
+.project-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 90px;
+    // background-color: red;
+    .project-title {
+       font-weight: 600;
+    }
+
+    
+}
+
+.project-section-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    .projects-view {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 350px;
+        height: fit-content;
+      }
+      
+      .item {
+        padding: 10px;
+        // border: 1px solid #ccc;
+        height: 270px;
+        padding: 2px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+      }
+      
+      .item.center {
+        grid-column: span 2;
+    }
+}
+
+
+
+@media screen and (min-width: $tablet-width){
+    .project-title-container {
+        height: 150px;
+        font-size: 25px;
+    }
+
+    .project-section-container {
+        .projects-view {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 10px;
+            column-gap: 15px;
+            width: 700px;
+            height: fit-content;
+          }
+          
+          .item {
+            height: 300px;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          
+          .item.center {
+            grid-column: span 2;
+        }
+    }
+    
+    
+}
