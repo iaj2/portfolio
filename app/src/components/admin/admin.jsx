@@ -7,14 +7,21 @@ import AddButton from './addButton/addButton'
 import { useState, useEffect, useRef } from 'react'
 import ProjectPreview from './projectPreview/projectPreview'
 import ProjectEditModal from '../modals/crudModals/projectEdit'
+import { useNavigate } from 'react-router-dom'
 
 const Admin = () => {
-    
     const [addJobModal, setAddJobModal] = useState(false);
-    const addJobModalRef = useRef()
-
     const [addProjectModal, setAddProjectModal] = useState(false);
+    const addJobModalRef = useRef()
     const addProjectRef = useRef()
+    const navigate = useNavigate()
+
+    useEffect(() => {
+      const authenticated = localStorage.getItem("authenticated")
+      if(!authenticated) {
+        navigate('/admin-login')
+      }
+    }, [])
 
     useEffect(() => {
 		const handleClickOutside = (e) => {
@@ -39,13 +46,19 @@ const Admin = () => {
 			document.removeEventListener('mousedown', handleClickOutside);
 		}
 	
-	  }, [addJobModal, addProjectModal]);
+	  }, [addJobModal, addProjectModal])
+
+    const handleLogout = () => {
+      localStorage.clear()
+      navigate('/')
+    }
 
     return (
         <div className='admin-page'>
-            <Link className='back-link' to='/'>
+            <button className='back-link' onClick={handleLogout} >
+              Log Out
                 <BackIcon />
-            </Link>
+            </button>
             <div className='jobs-header'>
                 <h1 className='jobs-title'>Jobs</h1>
                 <AddButton modal={addJobModal} setModal={setAddJobModal}/>
@@ -74,7 +87,6 @@ const Admin = () => {
                 }
             </div>
             <ProjectPreview />
-            
         </div>
     )
 }

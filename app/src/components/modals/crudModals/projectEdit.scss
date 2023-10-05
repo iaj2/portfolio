@@ -94,11 +94,13 @@ body.modal-disable-scroll{
     .project-tech-container {
         textarea{
             height: 30px;
+            
         }
     }
 
     input, textarea {
         width: 280px;
+        resize: vertical;
         font-size: 14px;
         font-weight: 400 !important;
         font-family: 'Inter';

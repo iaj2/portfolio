@@ -33,14 +33,14 @@ const JobPreview = () => {
 	
 	   }, [editModal]);
 
-	  useEffect( () => {
-        const getJobs = async () => {
-            const data = await getDocs(jobCollectionRef)
-            setJobs(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
-        }
+	//   useEffect( () => {
+    //     const getJobs = async () => {
+    //         const data = await getDocs(jobCollectionRef)
+    //         setJobs(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+    //     }
 
-        getJobs()
-    }, [jobCollectionRef])
+    //     getJobs()
+    // }, [jobCollectionRef])
 
     return (
         <>

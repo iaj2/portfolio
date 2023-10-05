@@ -36,7 +36,6 @@ body.modal-active {
         background-color: $background-color;
         border-radius: 80px;
         border: 1.5px solid $primary-color !important;
-        margin-left: 15px;
         height: 50px;
         width: 90px;
         color: $primary-color;
@@ -54,6 +53,7 @@ body.modal-active {
     overflow-y: auto;
 
     .close-button {
+        margin-left: 20px;
         align-self: flex-start;
         transform: translate(-2px,12px);
         width: 20px !important;
@@ -95,7 +95,8 @@ body.modal-active {
             }
     
             .message-input {
-                min-height: 135px;
+                resize: vertical;
+                min-height: 145px;
                 word-wrap: break-word;
                 line-height: 1.5;
                 

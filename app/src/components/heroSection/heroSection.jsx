@@ -23,7 +23,7 @@ const HeroSection = () => {
                 </div>
             </div>
             <div className='school'>
-                <p>SFU Comp Sci BSc <span>• 2022-2026 • 3.97 / 4.33 GPA</span></p>
+                <p>SFU Comp Sci BSc <span>• 2022-2026</span></p>
             </div>
             <div className='connect'>
                 <a href='https://www.linkedin.com/in/isaac-james-62765a278/' rel="noreferrer" target='_blank' className='social linkedIn'>
