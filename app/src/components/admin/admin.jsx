@@ -1,6 +1,5 @@
 import './admin.scss'
 import { ReactComponent as BackIcon } from '../../assets/icons/back.svg'
-import { Link } from 'react-router-dom'
 import JobPreview from './jobPreview/jobPreview'
 import JobEditModal from '../modals/crudModals/jobEdit'
 import AddButton from './addButton/addButton'
@@ -21,7 +20,7 @@ const Admin = () => {
       if(!authenticated) {
         navigate('/admin-login')
       }
-    }, [])
+    }, [navigate])
 
     useEffect(() => {
 		const handleClickOutside = (e) => {

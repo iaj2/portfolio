@@ -2,10 +2,6 @@ import './projectItem.scss'
 
 const ProjectItem = ({project}) => {
 
-    const longParagraph = `Engineered an advanced RPC system for a cutting-edge IoT Cloud device, using ZeroMQ for seamless socket connections and Protocol Buffers for rapid data transfer and broad language compatibility.
-    Pioneered a Python RPC server, leveraging the
-  `;
-
     return(
         <div className='project-item-container' >
             

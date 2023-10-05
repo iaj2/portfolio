@@ -15,7 +15,7 @@ const Login = () => {
         if(authenticated) {
           navigate('/admin')
         }
-      }, [])
+      }, [navigate])
     
     const handleLogin = (e) => {
         e.preventDefault();
