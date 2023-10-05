@@ -9,14 +9,14 @@ const ProjectSection = () => {
     const [projects, setProjects] = useState([])
     const projectsCollectionRef = collection(db, 'projects')
 
-    // useEffect( () => {
-    //     const getProjects = async () => {
-    //         const data = await getDocs(projectsCollectionRef)
-    //         setProjects(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
-    //     }
+    useEffect( () => {
+        const getProjects = async () => {
+            const data = await getDocs(projectsCollectionRef)
+            setProjects(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+        }
 
-    //     getProjects()
-    // }, [projectsCollectionRef])
+        getProjects()
+    }, [projectsCollectionRef])
 
     return (
     <>

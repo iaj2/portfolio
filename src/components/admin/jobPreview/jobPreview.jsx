@@ -42,14 +42,14 @@ const JobPreview = () => {
 	
 	   }, [editModal, confirmModal]);
 
-	//   useEffect( () => {
-    //     const getJobs = async () => {
-    //         const data = await getDocs(jobCollectionRef)
-    //         setJobs(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
-    //     }
+	  useEffect( () => {
+        const getJobs = async () => {
+            const data = await getDocs(jobCollectionRef)
+            setJobs(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+        }
 
-    //     getJobs()
-    // }, [jobCollectionRef])
+        getJobs()
+    }, [jobCollectionRef])
 
 	const deleteJob =  async () => {
 		const jobDoc = doc(db, 'jobs', jobIdToDelete)

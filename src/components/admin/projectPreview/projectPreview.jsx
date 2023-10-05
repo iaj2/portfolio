@@ -42,14 +42,14 @@ const ProjectPreview = () => {
 	
 	}, [editModal, confirmModal]);
     
-    // useEffect( () => {
-    //     const getProjects = async () => {
-    //         const data = await getDocs(projectsCollectionRef)
-    //         setProjects(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
-    //     }
+    useEffect( () => {
+        const getProjects = async () => {
+            const data = await getDocs(projectsCollectionRef)
+            setProjects(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
+        }
 
-    //     getProjects()
-    // }, [projectsCollectionRef])
+        getProjects()
+    }, [projectsCollectionRef])
 
     const deleteProject =  async () => {
 		const jobDoc = doc(db, 'projects', projectIdToDelete)
