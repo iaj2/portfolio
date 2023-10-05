@@ -19,11 +19,14 @@
     }
 
     .job-title {
-        margin-left: 65px;
+        margin-left: 35px;
     }
+
+
 
 }
 
+    
 @media  screen and (min-width: $desktop-width) {
     .job-preview-container {
         width: $item-container-width-desktop;

@@ -1,0 +1,21 @@
+@import '../../../App.scss';
+
+.delete-button {
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    position:absolute;
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(220px);
+}
+
+@media screen and (min-width: $desktop-width) {
+    .delete-button {
+        transform: translateX(390px);
+    }
+}

@@ -1,0 +1,68 @@
+@import '../../../App.scss';
+
+body.modal-disable-scroll{
+    overflow-y: hidden;
+}
+
+.confirm-modal-background {
+    background-color: #21202082;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.confirm-modal-container {
+    width: 220px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: $near-black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    .confirm-text-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        p{
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+    }
+
+    .confirm-button-wrapper {
+        display: flex;
+        justify-content: center;
+        height: fit-content;
+        width: 100%;
+        gap: 15px;
+        align-items: center;
+
+        .confirm-modal-button {
+            width: 45px;
+            height: 28px;
+            color: $primary-color;
+            background-color: $secondary-color;
+            border: 1.5px solid $primary-color;
+            border-radius: 12px;
+        }
+    }
+}
+
