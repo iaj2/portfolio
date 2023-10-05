@@ -1,5 +1,4 @@
 import { ReactComponent as DeleteIcon } from '../../../assets/icons/delete.svg'
-import ConfirmationModal from '../../modals/confirmationModal/confirmationModal'
 import './deleteButton.scss'
 
 const DeleteButton = ({docId, setDocToDelete, setConfirmModal}) => {
