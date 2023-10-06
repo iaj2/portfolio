@@ -33,6 +33,7 @@ const ProjectSection = () => {
                 <ProjectItem project={project}/>
             </div>
         ))}
+        
         </div>
             
         </div>

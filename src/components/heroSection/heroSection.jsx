@@ -4,7 +4,7 @@ import ContactFormModal from '../modals/contactForm/contactForm'
 import { ReactComponent as LinkedInIcon } from '../../assets/icons/linkedIn.svg'
 import { ReactComponent as GitHubIcon } from '../../assets/icons/github.svg'
 import { ReactComponent as RightArrowIcon } from '../../assets/icons/right-arrow.svg'
-import resumePdf from '../../assets/resume/9.1-Complex-numbers-PARTB.pdf'
+import resumePdf from '../../assets/resume/IsaacJamesResume.pdf'
 import meImg from '../../assets/images/me.jpg'
 
 const HeroSection = () => {
