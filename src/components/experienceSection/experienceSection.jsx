@@ -24,9 +24,10 @@ const ExperienceSection = () => {
             </div>
             <div className='experience-dropdown-container'>
                 {/* <ExperienceDropdownItem /> */}
-                {jobs.map((job) => {
+                {jobs.map((job, index) => {
                     return (
                         <ExperienceDropdownItem 
+                        key={index}
                         job={job}
                         />
                     )
