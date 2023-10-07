@@ -15,7 +15,6 @@ const JobPreview = () => {
 	const [confirmModal, setConfirmModal] = useState(false)
 	const [jobIdToDelete, setJobIdToDelete] = useState('')
 	const confirmModalRef = useRef()
-    const jobCollectionRef = collection(db, 'jobs')
 
     useEffect(() => {
 		const handleClickOutside = (e) => {
@@ -43,13 +42,15 @@ const JobPreview = () => {
 	   }, [editModal, confirmModal]);
 
 	  useEffect( () => {
+		const jobCollectionRef = collection(db, 'jobs')
+
         const getJobs = async () => {
             const data = await getDocs(jobCollectionRef)
             setJobs(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
         }
 
         getJobs()
-    }, [jobCollectionRef])
+    }, [])
 
 	const deleteJob =  async () => {
 		const jobDoc = doc(db, 'jobs', jobIdToDelete)

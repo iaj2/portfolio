@@ -5,18 +5,17 @@ import { db } from '../../firebase-config'
 import { collection, getDocs } from '@firebase/firestore'
 
 const ProjectSection = () => {
-    
     const [projects, setProjects] = useState([])
-    const projectsCollectionRef = collection(db, 'projects')
 
     useEffect( () => {
+        const projectsCollectionRef = collection(db, 'projects')
         const getProjects = async () => {
             const data = await getDocs(projectsCollectionRef)
             setProjects(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
         }
 
         getProjects()
-    }, [projectsCollectionRef])
+    }, [])
 
     return (
     <>
