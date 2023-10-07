@@ -6,16 +6,16 @@ import { collection, getDocs } from '@firebase/firestore'
 
 const ExperienceSection = () => {
     const [jobs, setJobs] = useState([])
-    const jobCollectionRef = collection(db, 'jobs')
 
     useEffect( () => {
+        const jobCollectionRef = collection(db, 'jobs')
         const getJobs = async () => {
             const data = await getDocs(jobCollectionRef)
             setJobs(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
         }
 
         getJobs()
-    }, [jobCollectionRef])
+    }, [])
 
     return (
         <>
@@ -24,9 +24,10 @@ const ExperienceSection = () => {
             </div>
             <div className='experience-dropdown-container'>
                 {/* <ExperienceDropdownItem /> */}
-                {jobs.map((job) => {
+                {jobs.map((job, index) => {
                     return (
                         <ExperienceDropdownItem 
+                        key={index}
                         job={job}
                         />
                     )

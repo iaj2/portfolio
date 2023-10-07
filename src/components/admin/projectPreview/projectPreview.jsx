@@ -13,7 +13,6 @@ const ProjectPreview = () => {
 	const [projects, setProjects] = useState([])
     const [confirmModal, setConfirmModal] = useState(false)
     const [projectIdToDelete, setProjectIdToDelete] = useState('')
-    const projectsCollectionRef = collection(db, 'projects')
     const confirmModalRef = useRef()
 
     useEffect(() => {
@@ -43,13 +42,14 @@ const ProjectPreview = () => {
 	}, [editModal, confirmModal]);
     
     useEffect( () => {
+		const projectsCollectionRef = collection(db, 'projects')
         const getProjects = async () => {
             const data = await getDocs(projectsCollectionRef)
             setProjects(data.docs.map((doc) => ({...doc.data(), id: doc.id})))
         }
 
         getProjects()
-    }, [projectsCollectionRef])
+    }, [])
 
     const deleteProject =  async () => {
 		const jobDoc = doc(db, 'projects', projectIdToDelete)
