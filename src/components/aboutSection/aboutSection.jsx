@@ -1,5 +1,8 @@
 import './aboutSection.scss'
 import ContactFormModal from '../modals/contactForm/contactForm'
+import meAestheticImg from '../../assets/images/me-aesthetic.JPG'
+import meVballImg from '../../assets/images/me-vball.jpg'
+import wpTeamImg from '../../assets/images/wp-team.PNG'
 
 const AboutSection = () => {
 
@@ -33,6 +36,9 @@ const AboutSection = () => {
                     <span className='text-larger '><b>Let's get connected!</b></span>
                     </div>
                     <div className='image-container footer-text'>
+                        <img className='me-aesthetic-img' src={meAestheticImg} alt='' ></img>
+                        <img className='me-vball-img' src={meVballImg} alt=''></img>
+                        <img className='wp-team-img' src={wpTeamImg} alt=''></img>
                     </div>
                 </div>
             </div>
