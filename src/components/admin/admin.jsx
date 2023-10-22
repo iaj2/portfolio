@@ -1,5 +1,6 @@
 import './admin.scss'
 import { ReactComponent as BackIcon } from '../../assets/icons/back.svg'
+import { ReactComponent as HomeIcon } from '../../assets/icons/home.svg'
 import JobPreview from './jobPreview/jobPreview'
 import JobEditModal from '../modals/crudModals/jobEdit'
 import AddButton from './addButton/addButton'
@@ -63,6 +64,10 @@ const Admin = () => {
             <button className='back-link' onClick={()=> setConfirmModal(true)} >
               Log Out
                 <BackIcon />
+            </button>
+            <button className='home-link' onClick={()=> navigate('/')} >
+              Home
+                <HomeIcon />
             </button>
             <div className='jobs-header'>
                 <h1 className='jobs-title'>Jobs</h1>
