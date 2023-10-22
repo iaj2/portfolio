@@ -1,7 +1,7 @@
 @import '../../App.scss';
 
-$self-img-size-desktop: 250px;
-$self-img-size-tablet: 200px;
+$self-img-size-desktop: 270px;
+$self-img-size-tablet: 220px;
 
 .hero-section-container{
     background-color: $secondary-color;
@@ -167,13 +167,24 @@ $self-img-size-tablet: 200px;
                     background-color: #00000000;
                     border: 2px solid $primary-color;
                     transform: translate(40px,40px);
-                    img{
+                    .img-container {
                         position: relative;
                         transform: translate(-40px, -40px);
+                        width: $self-img-size-tablet;
+                        height: $self-img-size-tablet;
+                        object-fit: cover;
+                        box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.5);
+                        overflow: hidden;
+                    }
+                    img{
+                        transform-origin: 35% 25%;
+                        position: relative;
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
-                        box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.5);
+                        transform: scale(1.8);
+
+                    
 
                     }
                 }
@@ -241,7 +252,18 @@ $self-img-size-tablet: 200px;
                 .img-back-drop{
                     width: $self-img-size-desktop;
                     height: $self-img-size-desktop;
+                    .img-container {
+                        position: relative;
+                        transform: translate(-30px, -30px);
+                        width: $self-img-size-desktop;
+                        height: $self-img-size-desktop;
+                        object-fit: cover;
+                        box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.5);
+                        overflow: hidden;
+                    }
+                 
                 }
+                
             }
             button {
                 height: 50px;

@@ -19,7 +19,10 @@ const HeroSection = () => {
             </div>
             <div className='image'>
                 <div className='img-back-drop'>
-                    <img src={meImg} alt=""></img>
+                    <div className="img-container">
+                        <img src={meImg} alt=""></img>
+                    </div>
+                    
                 </div>
             </div>
             <div className='school'>
