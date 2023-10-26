@@ -56,6 +56,7 @@ const ProjectPreview = () => {
 		await deleteDoc(jobDoc)
 		setConfirmModal(false)
 		alert('Sucessfully deleted project!')
+		window.location.reload()
 	}
 
     return (

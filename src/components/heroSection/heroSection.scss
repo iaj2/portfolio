@@ -1,14 +1,14 @@
 @import '../../App.scss';
 
-$self-img-size-desktop: 250px;
-$self-img-size-tablet: 200px;
+$self-img-size-desktop: 270px;
+$self-img-size-tablet: 220px;
 
 .hero-section-container{
-    background-color: $secondary-color;
     height: 600px;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 
     .hero-section-grid{
         height: 90%;
@@ -16,6 +16,8 @@ $self-img-size-tablet: 200px;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 2fr 2fr 1fr 1fr;
+        background-color: $secondary-color;
+
 
         div {
             display: flex;
@@ -36,9 +38,11 @@ $self-img-size-tablet: 200px;
             .text-smaller {
                 font-size: 18px
             }
-            span{
-                font-weight: 900;
+            .title {
+                font-size: 30px;
+                font-weight: 700;
             }
+            
         }
 
         .about-cta {
@@ -67,7 +71,9 @@ $self-img-size-tablet: 200px;
         }
 
         .image {
-            display: none;
+           display: none;
+          // width: 15px;
+          // height: 15px;
         }
 
         .school {
@@ -128,10 +134,12 @@ $self-img-size-tablet: 200px;
 }
 @media screen and (min-width: $tablet-width) {
     .hero-section-container {
-        max-height: 500px;
+        height: 550px;
         .hero-section-grid {
             display: grid;
             height: 100%;
+            width: 90%;
+            border-radius: 15px;
             grid-template-columns: 5fr 4fr;
             grid-template-rows: 6fr 1fr 2fr;
             grid-gap: 10px 0px;
@@ -167,11 +175,25 @@ $self-img-size-tablet: 200px;
                     background-color: #00000000;
                     border: 2px solid $primary-color;
                     transform: translate(40px,40px);
-                    img{
+                    .img-container {
                         position: relative;
                         transform: translate(-40px, -40px);
+                        width: $self-img-size-tablet;
+                        height: $self-img-size-tablet;
+                        object-fit: cover;
+                        box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.5);
+                        overflow: hidden;
+                    }
+                    img{
+                        transform-origin: 35% 25%;
+                        position: relative;
                         width: 100%;
                         height: 100%;
+                        object-fit: cover;
+                        transform: scale(1.8);
+
+                    
+
                     }
                 }
             }
@@ -238,7 +260,18 @@ $self-img-size-tablet: 200px;
                 .img-back-drop{
                     width: $self-img-size-desktop;
                     height: $self-img-size-desktop;
+                    .img-container {
+                        position: relative;
+                        transform: translate(-30px, -30px);
+                        width: $self-img-size-desktop;
+                        height: $self-img-size-desktop;
+                        object-fit: cover;
+                        box-shadow: 3px 3px 5px 4px rgba(0, 0, 0, 0.5);
+                        overflow: hidden;
+                    }
+                 
                 }
+                
             }
             button {
                 height: 50px;

@@ -4,7 +4,7 @@ import ContactFormModal from '../modals/contactForm/contactForm'
 import { ReactComponent as LinkedInIcon } from '../../assets/icons/linkedIn.svg'
 import { ReactComponent as GitHubIcon } from '../../assets/icons/github.svg'
 import { ReactComponent as RightArrowIcon } from '../../assets/icons/right-arrow.svg'
-import resumePdf from '../../assets/resume/9.1-Complex-numbers-PARTB.pdf'
+import resumePdf from '../../assets/resume/IsaacJamesResume.pdf'
 import meImg from '../../assets/images/me.jpg'
 
 const HeroSection = () => {
@@ -13,13 +13,16 @@ const HeroSection = () => {
     <div className='hero-section-container'>
         <div className='hero-section-grid'>
             <div className='intro'>
-                <p><span className='text-bold'>Hi,</span> I'm a driven computer science student with a solid foundation in software development and hands-on experience.</p>
+                <p className='title'>Computer Science Student and Software Developer. </p>
                 <br></br>
                 <p className='text-smaller'>Confident with <b>Python, React, C++</b> and <b>JavaScript.</b></p>
             </div>
             <div className='image'>
                 <div className='img-back-drop'>
-                    <img src={meImg} alt=""></img>
+                    <div className="img-container">
+                        <img src={meImg} alt=""></img>
+                    </div>
+                    
                 </div>
             </div>
             <div className='school'>

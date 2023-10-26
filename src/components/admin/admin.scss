@@ -29,10 +29,35 @@ $item-container-width-desktop: 500px;
     }
 }
 
+.home-link {
+    position: absolute;
+    top: 45px;
+    left: 5px;
+    width: 100px;
+    height: 30px;
+    background-color: $secondary-color;
+    color: $primary-color;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    svg {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 2px;
+    }
+}
 
+.jobs-header {
+    margin-top: 50px;
+}
+.projects-header {
+    margin-top: 20px;
+}
 .jobs-header, .projects-header {
     width: $item-container-width-mobile;
-    margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,5 +74,11 @@ $item-container-width-desktop: 500px;
         width: $item-container-width-desktop;
     }
     
+    .home-link {
+        position: absolute;
+        top: 5px;
+        left: 115px;
+
+    }
     
 }

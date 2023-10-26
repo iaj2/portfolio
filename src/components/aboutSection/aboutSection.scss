@@ -51,6 +51,7 @@
     }
 
     .image-container {
+        display: none;
     }
   
 }
@@ -102,6 +103,40 @@
     
         .image-container {
             grid-area: 1/ 2 / 1 / 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 25px;
+            align-items: flex-end;
+            padding-right: 50px;
+
+            .me-aesthetic-img {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                transform: translateX(25px);
+                box-shadow: 3px 3px 5px 8px rgba(0, 0, 0, 0.5);
+
+            }
+
+            .me-vball-img {
+                width: 250px;
+                height: 200px;
+                object-fit: cover;
+                object-position: 0 75%;
+                transform: translateX(-5px);
+                box-shadow: 3px 3px 5px 8px rgba(0, 0, 0, 0.5);
+
+            }
+
+            .wp-team-img {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                transform: translateX(40px);
+                box-shadow: 3px 3px 5px 8px rgba(0, 0, 0, 0.5);
+
+            }
         }
     }
 }
