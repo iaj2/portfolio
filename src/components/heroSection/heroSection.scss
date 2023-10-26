@@ -4,24 +4,26 @@ $self-img-size-desktop: 270px;
 $self-img-size-tablet: 220px;
 
 .hero-section-container{
-    height: 600px;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 
     .hero-section-grid{
-        height: 90%;
         width: 100vw;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 2fr 2fr 2fr 1fr 1fr;
+        grid-template-rows: 3fr 1fr  1fr;
         background-color: $secondary-color;
+        padding-bottom: 15px;
 
 
         div {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
+            justify-content: center;
+            
             padding-left: 15px;
             padding-right: 15px;
             p {
@@ -32,23 +34,22 @@ $self-img-size-tablet: 220px;
         }
 
         .intro {
-            grid-area: 1/1 / 3/1;
+            grid-area: 1/1 / 2/1;
             flex-direction: column;
             justify-content: center;
             .text-smaller {
                 font-size: 18px
             }
             .title {
-                font-size: 30px;
+                font-size: 34px;
                 font-weight: 700;
+                margin-top: 35px;
             }
-            
+         
         }
 
         .about-cta {
             grid-area: 2/1 /3/1;
-            align-items: flex-start;
-            transform: translateY(150px);
 
             
             .about-cta-button {
@@ -77,7 +78,7 @@ $self-img-size-tablet: 220px;
         }
 
         .school {
-            grid-area: 4/1 / 4/1;
+            grid-area: 3/1 / 3/1;
             p {
                 font-size: 20px;
                 color: #ffffff8a;
@@ -102,7 +103,7 @@ $self-img-size-tablet: 220px;
         }
 
         .connect {
-            grid-area: 5/1 /5/1;
+            grid-area: 4/1 /4/1;
             
             
             .social {
@@ -134,7 +135,7 @@ $self-img-size-tablet: 220px;
 }
 @media screen and (min-width: $tablet-width) {
     .hero-section-container {
-        height: 550px;
+        height:fit-content;
         .hero-section-grid {
             display: grid;
             height: 100%;
@@ -161,6 +162,9 @@ $self-img-size-tablet: 220px;
                 .text-smaller {
                     align-self: flex-start;
                     font-size: 18px
+                }
+                .title {
+                    font-size: 40px;
                 }
             }
         
@@ -216,8 +220,6 @@ $self-img-size-tablet: 220px;
             }
             .about-cta {
                 grid-area: 3/2 / 4/2;
-                transform: translateY(0);
-                
                 .about-cta-button {
                     width: 200px;
                     font-size: 14px;

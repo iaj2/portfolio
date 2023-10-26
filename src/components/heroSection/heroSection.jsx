@@ -13,8 +13,7 @@ const HeroSection = () => {
     <div className='hero-section-container'>
         <div className='hero-section-grid'>
             <div className='intro'>
-                <p className='title'>Computer Science Student and Software Developer. </p>
-                <br></br>
+                <p className='title'>Software Developer and Computer Science Student.</p>
                 <p className='text-smaller'>Confident with <b>Python, React, C++</b> and <b>JavaScript.</b></p>
             </div>
             <div className='image'>
