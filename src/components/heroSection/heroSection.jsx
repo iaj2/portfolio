@@ -13,7 +13,7 @@ const HeroSection = () => {
     <div className='hero-section-container'>
         <div className='hero-section-grid'>
             <div className='intro'>
-                <p><span className='text-bold'>Hi,</span> I'm a driven computer science student with a solid foundation in software development and hands-on experience.</p>
+                <p className='title'>Computer Science Student and Software Developer. </p>
                 <br></br>
                 <p className='text-smaller'>Confident with <b>Python, React, C++</b> and <b>JavaScript.</b></p>
             </div>

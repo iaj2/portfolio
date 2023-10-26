@@ -13,9 +13,6 @@ const ExperienceDropdownItem = ({job}) => {
     return ( 
         <div className='experience-item-container'>
             <div className='experience-item-header' onClick={toggleDropdown} id='experience-item'>
-                <a href='#experience-item'> 
-   
-                </a>
                 <p>{job.companyName}</p>
                 <p className='job-title'>{job.jobTitle} </p>
                 <p> {job.jobStart} - {job.jobEnd}</p>
